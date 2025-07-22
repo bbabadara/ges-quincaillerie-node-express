@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:push": "prisma db push",
-    "db:studio": "prisma studio",
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "postinstall": "npx prisma generate",
+  "start": "npx prisma migrate deploy && node src/server.js"
   },
   "keywords": [],
   "author": "",
